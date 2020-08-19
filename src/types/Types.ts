@@ -4,7 +4,7 @@ export interface Props {
   children: ReactNode
 }
 
-export interface VideoGridProps {
+export interface VideoGridItemProps {
   id: string
   src: string
   title: string

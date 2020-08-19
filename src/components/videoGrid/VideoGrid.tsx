@@ -1,18 +1,9 @@
 import React, { FC } from "react"
-import { Link } from "react-router-dom"
-import { VideoGridProps } from "../../types/Types"
+import { Props } from "../../types/Types"
+import Style from "./VideoGrid.module.scss"
 
-const VideoGrid: FC<VideoGridProps> = ({ id, src, title }: VideoGridProps) => {
-  return (
-    <div>
-      <Link to={{ pathname: "watch", search: `?v=${id}` }}>
-        <div>
-          <img src={src} alt={title} />
-          <span>{title}</span>
-        </div>
-      </Link>
-    </div>
-  )
+const VideoGrid: FC<Props> = ({ children }: Props) => {
+  return <div className={Style.container}>{children}</div>
 }
 
 export default VideoGrid

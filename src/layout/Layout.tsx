@@ -1,12 +1,13 @@
 import React, { FC } from "react"
 import Header from "../header/Header"
 import { Props } from "../types/Types"
+import Style from "./Layout.module.scss"
 
 const Layout: FC<Props> = ({ children }: Props) => {
   return (
-    <div>
+    <div className={Style.wrapper}>
       <Header />
-      <div>{children}</div>
+      <div className={Style.main}>{children}</div>
     </div>
   )
 }
