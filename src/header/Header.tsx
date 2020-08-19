@@ -2,6 +2,7 @@ import { faSearch } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import React, { FC, useState } from "react"
 import { Link } from "react-router-dom"
+import Style from "./Header.module.scss"
 
 const Header: FC = () => {
   const [searchWord, setSearchWord] = useState("")
@@ -12,11 +13,11 @@ const Header: FC = () => {
     e.preventDefault()
   }
   return (
-    <div>
-      <div>
+    <div className={Style.header}>
+      <div className={Style.item}>
         <Link to="/">VideoTube</Link>
       </div>
-      <div>
+      <div className={Style.item}>
         <form onSubmit={handleSubmit}>
           <input type="text" placeholder="検索" value={searchWord} onChange={handleChange} />
           <button type="submit">
