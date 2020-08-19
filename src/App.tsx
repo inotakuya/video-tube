@@ -1,8 +1,8 @@
-import React from "react"
+import React, { FC } from "react"
 import { BrowserRouter, Route, Switch } from "react-router-dom"
 import Top from "./pages/Top"
 
-function App() {
+const App: FC = () => {
   return (
     <BrowserRouter>
       <Switch>

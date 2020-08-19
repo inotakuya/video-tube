@@ -1,4 +1,4 @@
-import React, { FC, ReactNode } from "react"
+import React, { FC } from "react"
 import Header from "../header/Header"
 import { Props } from "../types/Types"
 
