@@ -1,7 +1,7 @@
 import axios from "axios"
 import { YoutubeProps } from "../types/Types"
 
-const KEY = "AIzaSyCNLv1nMKz1ITHKoCUsvzq21JAgRl5kmFk"
+const KEY = "AIzaSyDxnMzRoxcWXx_bI4GxygRmisG0-C_srIk"
 const youtubeApi = axios.create({
   baseURL: "https://www.googleapis.com/youtube/v3",
 })
@@ -32,6 +32,17 @@ export const fetchSelectedData = async (id: string): Promise<YoutubeProps> => {
     params: {
       ...commonParams,
       id,
+    },
+  })
+  return result
+}
+
+// youtube関連動画情報を取得
+export const fetchRelatedData = async (id: string): Promise<YoutubeProps> => {
+  const result = await youtubeApi.get("search", {
+    params: {
+      ...commonParams,
+      relatedToVideoId: id,
     },
   })
   return result

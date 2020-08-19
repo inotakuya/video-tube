@@ -13,19 +13,31 @@ export interface VideoGridItemProps {
 export enum ActionType {
   SET_POPULAR = "SET_POPULAR",
   SET_SELECTED = "SET_SELECTED",
+  SET_RELATED = "SET_RELATED",
+}
+
+export interface Snippet {
+  title: string
+  description: string
+  thumbnails: {
+    standard: {
+      url: string
+    }
+    medium: {
+      url: string
+    }
+  }
 }
 
 export interface Popular {
   id: string
-  snippet: {
-    title: string
-    description: string
-    thumbnails: {
-      standard: {
-        url: string
-      }
-    }
+  snippet: Snippet
+}
+export interface Video {
+  id: {
+    videoId: string
   }
+  snippet: Snippet
 }
 
 export interface ContextValue {
@@ -36,6 +48,7 @@ export interface ContextValue {
 export interface AppState {
   popular?: []
   selected?: Popular
+  related?: []
 }
 
 export interface AppAction {

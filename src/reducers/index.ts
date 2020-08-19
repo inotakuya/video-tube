@@ -6,6 +6,8 @@ const reducer = (state: AppState, action: AppAction): AppState => {
       return { ...state, popular: action.payload.popular }
     case ActionType.SET_SELECTED:
       return { ...state, selected: action.payload.selected }
+    case ActionType.SET_RELATED:
+      return { ...state, related: action.payload.related }
     default:
       return state
   }
