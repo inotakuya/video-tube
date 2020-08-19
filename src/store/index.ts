@@ -1,8 +1,9 @@
 import { createContext } from "react"
-import { AppState, ContextValue } from "../types/Types"
+import { AppState, ContextValue, Popular } from "../types/Types"
 
 export const initialState: AppState = {
   popular: [],
+  selected: {} as Popular,
 }
 
 export const Store = createContext({

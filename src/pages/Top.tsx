@@ -1,5 +1,5 @@
 import React, { FC, useContext, useEffect } from "react"
-import fetchPopularData from "../api"
+import { fetchPopularData } from "../api/index"
 import VideoGrid from "../components/videoGrid/VideoGrid"
 import VideoGridItem from "../components/videoGridItem/VideoGridItem"
 import Layout from "../layout/Layout"

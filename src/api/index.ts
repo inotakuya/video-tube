@@ -16,7 +16,7 @@ const commonParams = {
 }
 
 // youtube動画リストを取得
-const fetchPopularData = async (): Promise<YoutubeProps> => {
+export const fetchPopularData = async (): Promise<YoutubeProps> => {
   const result = await youtubeApi.get("videos", {
     params: {
       ...commonParams,
@@ -26,4 +26,13 @@ const fetchPopularData = async (): Promise<YoutubeProps> => {
   return result
 }
 
-export default fetchPopularData
+// youtube動画情報を取得
+export const fetchSelectedData = async (id: string): Promise<YoutubeProps> => {
+  const result = await youtubeApi.get("videos", {
+    params: {
+      ...commonParams,
+      id,
+    },
+  })
+  return result
+}
