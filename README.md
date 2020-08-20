@@ -2,7 +2,7 @@
 YouTubeを検索・視聴するWEBアプリケーション
 
 ### 言語
-JavaScript
+JavaScript, TypeScript
 
 ### フレームワーク
 React, React Hooks
