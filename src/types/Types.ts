@@ -14,6 +14,8 @@ export enum ActionType {
   SET_POPULAR = "SET_POPULAR",
   SET_SELECTED = "SET_SELECTED",
   SET_RELATED = "SET_RELATED",
+  SET_SEARCHED = "SET_SEARCHED",
+  SET_SEARCH_WORD = "SET_SEARCH_WORD",
 }
 
 export interface Snippet {
@@ -49,6 +51,8 @@ export interface AppState {
   popular?: []
   selected?: Popular
   related?: []
+  searched?: []
+  searchWord?: string
 }
 
 export interface AppAction {

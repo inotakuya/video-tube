@@ -10,6 +10,7 @@ import SideList from "../components/sideList/SideList"
 const Watch: FC = () => {
   const { setGlobalState } = useContext(Store)
   const { search } = useLocation()
+
   const setVideos = async () => {
     // urlのid(v=以降)を取得
     const searchParams = new URLSearchParams(search)

@@ -8,6 +8,10 @@ const reducer = (state: AppState, action: AppAction): AppState => {
       return { ...state, selected: action.payload.selected }
     case ActionType.SET_RELATED:
       return { ...state, related: action.payload.related }
+    case ActionType.SET_SEARCHED:
+      return { ...state, searched: action.payload.searched }
+    case ActionType.SET_SEARCH_WORD:
+      return { ...state, searchWord: action.payload.searchWord }
     default:
       return state
   }

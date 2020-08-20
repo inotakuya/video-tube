@@ -47,3 +47,14 @@ export const fetchRelatedData = async (id: string): Promise<YoutubeProps> => {
   })
   return result
 }
+
+// youtube検索動画リスト情報を取得
+export const fetchSearchData = async (query: string): Promise<YoutubeProps> => {
+  const result = await youtubeApi.get("search", {
+    params: {
+      ...commonParams,
+      q: query,
+    },
+  })
+  return result
+}

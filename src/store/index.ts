@@ -5,6 +5,8 @@ export const initialState: AppState = {
   popular: [],
   selected: {} as Popular,
   related: [],
+  searched: [],
+  searchWord: "",
 }
 
 export const Store = createContext({
