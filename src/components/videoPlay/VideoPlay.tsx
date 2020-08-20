@@ -5,7 +5,7 @@ import Style from "./VideoPlay.module.scss"
 
 const VideoPlay: FC<VideoPlayProps> = ({ id }: VideoPlayProps) => {
   return (
-    <div>
+    <div className={Style.wrap}>
       <YouTube videoId={id} opts={{ playerVars: { autoplay: 1 } }} className={Style.video} />
     </div>
   )

@@ -1,7 +1,7 @@
 import axios from "axios"
 import { YoutubeProps } from "../types/Types"
 
-const KEY = "AIzaSyDxnMzRoxcWXx_bI4GxygRmisG0-C_srIk"
+const KEY = "AIzaSyDodyg4kfFvuh4ECR407SDD9wlkQn8GnjM"
 const youtubeApi = axios.create({
   baseURL: "https://www.googleapis.com/youtube/v3",
 })
