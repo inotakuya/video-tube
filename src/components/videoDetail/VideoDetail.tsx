@@ -1,6 +1,6 @@
 import React, { FC, useContext } from "react"
 import ReactLinkify from "react-linkify"
-import { Store } from "../../store/index"
+import { Store } from "../../store"
 import VideoPlay from "../videoPlay/VideoPlay"
 import Style from "./VideoDetail.module.scss"
 

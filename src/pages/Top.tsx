@@ -23,14 +23,17 @@ const Top: FC = () => {
         <VideoGrid>
           {globalState.popular &&
             // 動画一覧がある場合
-            globalState.popular.map((popular: Popular) => (
-              <VideoGridItem
-                id={popular.id}
-                key={popular.id}
-                src={popular.snippet.thumbnails.standard.url}
-                title={popular.snippet.title}
-              />
-            ))}
+            globalState.popular
+              // standardがない場合
+              .filter((popular: Popular) => popular.snippet.thumbnails.standard != null)
+              .map((popular: Popular) => (
+                <VideoGridItem
+                  id={popular.id}
+                  key={popular.id}
+                  src={popular.snippet.thumbnails.standard.url}
+                  title={popular.snippet.title}
+                />
+              ))}
         </VideoGrid>
       </Layout>
     </div>

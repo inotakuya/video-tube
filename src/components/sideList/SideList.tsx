@@ -1,5 +1,5 @@
 import React, { FC, useContext } from "react"
-import { Store } from "../../store/index"
+import { Store } from "../../store"
 import { Video } from "../../types/Types"
 import SideListItem from "../sideListItem/sideListItem"
 import Style from "./SideList.module.scss"
@@ -9,14 +9,16 @@ const SideList: FC = () => {
   return (
     <div className={Style.sideNav}>
       {globalState.related ? (
-        globalState.related.map((video: Video) => (
-          <SideListItem
-            id={video.id.videoId}
-            key={video.id.videoId}
-            src={video.snippet.thumbnails.medium.url}
-            title={video.snippet.title}
-          />
-        ))
+        globalState.related
+          .filter((video: Video) => video.snippet != null)
+          .map((video: Video) => (
+            <SideListItem
+              id={video.id.videoId}
+              key={video.id.videoId}
+              src={video.snippet.thumbnails.medium.url}
+              title={video.snippet.title}
+            />
+          ))
       ) : (
         <span>no data</span>
       )}
